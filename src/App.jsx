@@ -1,12 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import Content from './components/Content'
 
-function App() {
-
+export default function App() {
   return (
     <>
-      <h1>Mini E-commerce</h1>
+      <Navbar/>
+      <Content/>
     </>
   )
 }
-
-export default App
