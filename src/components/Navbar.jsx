@@ -10,7 +10,7 @@ export default function Navbar() {
                     <h1>Mini E-commerce</h1>
                     <button onClick={()=>{dispatch(changeContent("shop"))}}>Shop</button>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex items-center gap-4">
                     <button onClick={()=>{dispatch(changeContent("cart"))}}>Cart</button>
                     <button onClick={()=>{dispatch(changeContent("fav"))}}>Fav</button>
                     <button>Theme</button>
