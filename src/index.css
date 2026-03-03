@@ -1,10 +1,35 @@
 @import "tailwindcss";
 
 :root {
+    --bg-line-color: #bebebeab;
     --bg-color: #f7f7f7;
     --primary-text-color: #212529;
     --secondary-text-color: #212529;
     --ternary-text-color: #212529;
+    --border-color: black;
+    --hover-text-color: white;
+}
+
+/* light theme */
+[data-theme="light"] {
+    --bg-line-color: #bebebeab;
+    --bg-color: #f7f7f7;
+    --primary-text-color: #212529;
+    --secondary-text-color: #212529;
+    --ternary-text-color: #212529;
+    --border-color: black;
+    --hover-text-color: white;
+}
+
+/* dark theme */
+[data-theme="dark"] {
+    --bg-line-color: #0f0f0fab;
+    --bg-color: #212529;
+    --primary-text-color: #f7f7f7;
+    --secondary-text-color: #f7f7f7;
+    --ternary-text-color: #f7f7f7;
+    --border-color: white;
+    --hover-text-color: black;
 }
 
 body {
@@ -31,11 +56,11 @@ button {
     font-size: 14px;
     color: var(--ternary-text-color);
     padding: 2px 12px;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     cursor: pointer;
 }
 
 button:hover {
-    color: white;
-    background-color: black;
+    color: var(--hover-text-color);
+    background-color: var(--border-color);
 }
