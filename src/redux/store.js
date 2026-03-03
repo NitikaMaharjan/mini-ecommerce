@@ -1,10 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterSlice from './counter/counterSlice.js'
-import themeSlice from './theme/themeSlice.js'
+import { configureStore } from "@reduxjs/toolkit";
+import productsSlice from "./products/productsSlice.js";
 
 export default configureStore({
   reducer: {
-    counter: counterSlice,
-    theme: themeSlice
+    products: productsSlice
   }
 })

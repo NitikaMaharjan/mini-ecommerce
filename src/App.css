@@ -1,0 +1,19 @@
+.content {
+    padding: 32px;
+}
+
+.product-item {
+    padding: 12px;
+    background-color: white;
+    width: 200px;
+}
+
+.button {
+    padding: 2px 6px;
+    border: 1px solid black;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}

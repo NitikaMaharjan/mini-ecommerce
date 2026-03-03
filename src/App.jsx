@@ -1,14 +1,16 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import CounterContent from './components/CounterContent'
-import ThemeContent from './components/ThemeContent'
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Products from "./components/Products";
+import Cart from "./components/Cart";
+import Fav from "./components/Fav";
 
 export default function App() {
   return (
     <>
       <Navbar/>
-      <CounterContent/>
-      <ThemeContent/>
+      <Products/>
+      <Cart/>
+      <Fav/>
     </>
   )
 }
