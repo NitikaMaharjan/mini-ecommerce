@@ -20,7 +20,7 @@ export default function Fav() {
               <p>Rs {item.price}</p>
               <div className="flex justify-between mt-4">
                 <button className="button" onClick={()=>{dispatch(addToFav({id: item.id, url: item.url, name: item.name, price: item.price}))}}>Fav</button>
-                <button className="button" onClick={()=>{dispatch(removeFromCart(item.id))}}>Remove from cart</button>
+                <button className="button" onClick={()=>{dispatch(removeFromCart({id: item.id, price: item.price}))}}>Remove from cart</button>
               </div>
             </div>
           })

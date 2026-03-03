@@ -68,7 +68,8 @@ export const productsSlice = createSlice({
       }
     ],
     favItems: [],
-    cartItems: []
+    cartItems: [],
+    totalPrice: 0
   },
   
   reducers: {
@@ -85,13 +86,16 @@ export const productsSlice = createSlice({
       const exists = state.cartItems.some(item => item.id === action.payload.id);
       if (!exists) {
         state.cartItems.push({id: action.payload.id, url: action.payload.url, name: action.payload.name, price: action.payload.price});
+        state.totalPrice += action.payload.price;
       }
     },
     removeFromCart: (state, action) => {
-      state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
+      state.cartItems = state.cartItems.filter(item => item.id !== action.payload.id);
+      state.totalPrice -= action.payload.price;
     },
     clearCart: (state) => {
       state.cartItems = [];
+      state.totalPrice = 0;
     }
   }
 })
