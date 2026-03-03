@@ -1,18 +1,18 @@
 import { useSelector } from "react-redux";
 
-export default function Products() {
+export default function Shop() {
   const items = useSelector(state => state.products.items); 
   return (
     <div className="content">
-      <h1 className="mb-4">Products</h1>
+      <h1 className="mb-4">Shop</h1>
       <div className="grid grid-cols-6 gap-8">
         {
           items.map((item, id)=>{
-            return <div id={id} className="product-item">
+            return <div key={id} className="product-item">
               <img src={item.url} style={{height: "140px", width: "140px"}}/>
               <h3>{item.name}</h3>
               <p>Rs {item.price}</p>
-              <div className="flex justify-between">
+              <div className="flex justify-between mt-4">
                 <button className="button">Fav</button>
                 <button className="button">Add to Cart</button>
               </div>

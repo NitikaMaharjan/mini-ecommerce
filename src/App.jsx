@@ -1,7 +1,7 @@
 import "./App.css";
 import { useSelector } from "react-redux";
 import Navbar from "./components/Navbar";
-import Products from "./components/Products";
+import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import Fav from "./components/Fav";
 
@@ -12,7 +12,7 @@ export default function App() {
       <Navbar/>
       {
         contentChoice==="shop" &&
-        <Products/>
+        <Shop/>
       }
       {
         contentChoice==="cart" &&

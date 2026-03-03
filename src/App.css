@@ -1,14 +1,10 @@
 .content {
-    padding: 12px 32px;
+    margin: 80px 0px 40px 0px;
+    padding: 0px 32px;
 }
 
 .product-item {
     padding: 12px;
     background-color: white;
     width: 200px;
-}
-
-.button:hover {
-    color: white;
-    background-color: black;
 }

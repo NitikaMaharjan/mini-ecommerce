@@ -9,7 +9,6 @@
 
 body {
     width: 100%;
-    height: 100vh;
     background-color: var(--bg-color);
 }
 
@@ -34,4 +33,9 @@ button {
     padding: 2px 12px;
     border: 1px solid black;
     cursor: pointer;
+}
+
+button:hover {
+    color: white;
+    background-color: black;
 }
