@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addToFav, removeFromCart } from "../redux/products/productsSlice";
+import { addToFav, removeFromCart, clearCart } from "../redux/products/productsSlice";
 
 export default function Fav() {
   const dispatch = useDispatch();
@@ -7,6 +7,10 @@ export default function Fav() {
   return (
     <div className="content">
       <h1 className="mb-4">Cart</h1>
+      {
+        cartItems.length!==0 &&
+        <button className="mb-4" onClick={()=>{dispatch(clearCart())}}>Clear Cart</button>
+      }
       <div className="grid grid-cols-5 gap-6">
         {
           cartItems.map((item, id)=>{
