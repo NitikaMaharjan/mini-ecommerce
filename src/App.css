@@ -1,3 +1,7 @@
+.navbar {
+    background-color: var(--bg-color);
+}
+
 .content {
     margin: 80px 0px 40px 0px;
     padding: 0px 32px;
@@ -5,6 +9,23 @@
 
 .product-item {
     padding: 12px;
+    background-color: var(--hover-text-color);
+    border: 1px solid var(--bg-line-color);
+}
+
+.notification-bg {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.notification {
+    margin-top: 12px;
+    padding: 4px 12px;
     background-color: var(--hover-text-color);
     border: 1px solid var(--bg-line-color);
 }

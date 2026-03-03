@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToFav } from "../redux/products/productsSlice";
+import { showNotification } from "../redux/notification/notificationSlice";
 
 export default function Shop() {
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ export default function Shop() {
               <h3><b>{item.name}</b></h3>
               <p>Rs {item.price}</p>
               <div className="flex justify-between mt-4">
-                <button onClick={()=>{dispatch(addToFav({id: item.id, url: item.url, name: item.name, price: item.price}))}}>Fav</button>
-                <button onClick={()=>{dispatch(addToCart({id: item.id, url: item.url, name: item.name, price: item.price}))}}>Add to Cart</button>
+                <button onClick={()=>{dispatch(addToFav({id: item.id, url: item.url, name: item.name, price: item.price})); dispatch(showNotification("Added product to fav successfully!"));}}>Fav</button>
+                <button onClick={()=>{dispatch(addToCart({id: item.id, url: item.url, name: item.name, price: item.price})); dispatch(showNotification("Added product to cart successfully!"));}}>Add to Cart</button>
               </div>
             </div>
           })
