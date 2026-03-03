@@ -67,19 +67,32 @@ export const productsSlice = createSlice({
         price: 95
       }
     ],
-    favItems: []
+    favItems: [],
+    cartItems: []
   },
   
   reducers: {
     addToFav: (state, action) => {
-      state.favItems.push({id: action.payload.id, url: action.payload.url, name: action.payload.name, price: action.payload.price});
+      const exists = state.favItems.some(item => item.id === action.payload.id);
+      if (!exists) {
+        state.favItems.push({id: action.payload.id, url: action.payload.url, name: action.payload.name, price: action.payload.price});
+      }
     },
     removeFromFav: (state, action) => {
       state.favItems = state.favItems.filter(item => item.id !== action.payload);
+    },
+    addToCart: (state, action) => {
+      const exists = state.cartItems.some(item => item.id === action.payload.id);
+      if (!exists) {
+        state.cartItems.push({id: action.payload.id, url: action.payload.url, name: action.payload.name, price: action.payload.price});
+      }
+    },
+    removeFromCart: (state, action) => {
+      state.cartItems = state.cartItems.filter(item => item.id !== action.payload);
     }
   }
 })
 
-export const { addToFav, removeFromFav } = productsSlice.actions
+export const { addToFav, removeFromFav, addToCart, removeFromCart } = productsSlice.actions
 
 export default productsSlice.reducer
