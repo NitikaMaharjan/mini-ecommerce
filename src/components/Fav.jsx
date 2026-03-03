@@ -1,5 +1,5 @@
 export default function Fav() {
   return (
-    <div>Fav</div>
+    <div className="content">Fav</div>
   )
 }
